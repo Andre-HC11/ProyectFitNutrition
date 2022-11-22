@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="medico">
+    
+    <select id="getAllMedicos" resultType="pojos.Medico">
+        SELECT idMedico, noPersonal, medico.nombre, apellidoPaterno, apellidoMaterno, DATE_FORMAT(fechaNacimiento, '%d/%m/%Y') AS 'fechaNacimiento', 
+        medico.idRol, catalogo.nombre AS 'rol' FROM medico INNER JOIN catalogo ON medico.idRol=catalogo.idCatalogo where idEstatus=201
+    </select>
+
+    <select id="getById" resultType="pojos.Medico" parameterType="int">
+        SELECT * FROM medico WHERE idMedico = #{idMedico}
+    </select>
+    
+    <insert id="registrar" parameterType="pojos.Medico" >
+        INSERT INTO medico (nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento, genero, domicilio, noPersonal, cedula, password, idRol, idEstatus)
+        VALUES (#{nombre}, #{apellidoPaterno}, #{apellidoMaterno}, #{fechaNacimiento}, #{genero}, #{domicilio}, #{noPersonal}, #{cedula}, #{password}, #{idRol}, 201)
+    </insert>
+    
+    <update id="eliminar" parameterType="int">
+        UPDATE medico SET idEstatus = 202
+        WHERE idMedico = #{idMedico}
+    </update>
+
+</mapper>

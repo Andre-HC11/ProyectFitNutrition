@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="497.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxfitnutrition.FXMLFormularioPacienteController">
+   <children>
+      <Label layoutX="233.0" layoutY="21.0" text="Alta Pacientes">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="123.0" layoutY="79.0" promptText="Nombre" />
+      <TextField layoutX="342.0" layoutY="79.0" promptText="Apellidos" />
+      <TextField layoutX="123.0" layoutY="125.0" promptText="Fecha de Nacimiento" />
+      <TextField layoutX="343.0" layoutY="125.0" promptText="Género" />
+      <TextField layoutX="122.0" layoutY="175.0" promptText="Peso" />
+      <TextField layoutX="343.0" layoutY="175.0" promptText="Estatura" />
+      <TextField layoutX="122.0" layoutY="218.0" promptText="Talla Inicial" />
+      <TextField layoutX="343.0" layoutY="218.0" promptText="Email" />
+      <TextField layoutX="122.0" layoutY="265.0" promptText="Teléfono" />
+      <TextField layoutX="343.0" layoutY="265.0" promptText="Domicilio" />
+      <TextField layoutX="123.0" layoutY="312.0" promptText="Usuario" />
+      <TextField layoutX="342.0" layoutY="312.0" promptText="Contraseña" />
+      <TextField layoutX="123.0" layoutY="358.0" promptText="Señalar Médico" />
+      <Button layoutX="238.0" layoutY="423.0" mnemonicParsing="false" text="Registrar Paciente" />
+   </children>
+</AnchorPane>
